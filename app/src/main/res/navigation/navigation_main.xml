@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/itemHome">
+
+    <fragment
+        android:id="@+id/itemHome"
+        android:name="com.ubaya.ubayaeats_160419069.view.RestaurantListFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_restaurant_list">
+        <action
+            android:id="@+id/action_itemHome_to_detailListFragment"
+            app:destination="@id/detailListFragment" />
+        <action
+            android:id="@+id/action_itemHome_to_promotionListFragment"
+            app:destination="@id/promotionListFragment" />
+        <action
+            android:id="@+id/action_itemHome_to_nearMeListFragment"
+            app:destination="@id/nearMeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemSave"
+        android:name="com.ubaya.ubayaeats_160419069.view.SaveListFragment"
+        android:label="Saved"
+        tools:layout="@layout/fragment_save_list" />
+    <fragment
+        android:id="@+id/itemProfile"
+        android:name="com.ubaya.ubayaeats_160419069.view.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/detailListFragment"
+        android:name="com.ubaya.ubayaeats_160419069.view.DetailListFragment"
+        android:label="Details List Restaurant"
+        tools:layout="@layout/fragment_detail_list">
+        <action
+            android:id="@+id/action_detailListFragment_to_reviewListFragment"
+            app:destination="@id/reviewListFragment" />
+        <argument
+            android:name="restaurantID"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemSearch"
+        android:name="com.ubaya.ubayaeats_160419069.view.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/promotionListFragment"
+        android:name="com.ubaya.ubayaeats_160419069.view.PromotionListFragment"
+        android:label="fragment_promotion_list"
+        tools:layout="@layout/fragment_promotion_list" />
+    <fragment
+        android:id="@+id/nearMeListFragment"
+        android:name="com.ubaya.ubayaeats_160419069.view.NearMeListFragment"
+        android:label="Near Me"
+        tools:layout="@layout/fragment_near_me_list" >
+        <action
+            android:id="@+id/action_nearMeListFragment_to_detailListFragment"
+            app:destination="@id/detailListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewListFragment"
+        android:name="com.ubaya.ubayaeats_160419069.view.ReviewListFragment"
+        android:label="Restaurant Reviews"
+        tools:layout="@layout/fragment_review_list">
+        <argument
+            android:name="idRestaurantReview"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_reviewListFragment_to_createReviewFragment"
+            app:destination="@id/createReviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createReviewFragment"
+        android:name="com.ubaya.ubayaeats_160419069.view.CreateReviewFragment"
+        android:label="Add Review"
+        tools:layout="@layout/fragment_create_review" />
+</navigation>

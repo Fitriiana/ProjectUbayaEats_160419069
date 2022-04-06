@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.DetailListFragment" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/progressLoadMenu"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/imageMenu"
+                app:layout_constraintStart_toStartOf="@+id/imageMenu"
+                app:layout_constraintTop_toTopOf="@+id/imageMenu" />
+
+            <TextView
+                android:id="@+id/textDistanceRest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_baseline_location_on_24"
+                android:fontFamily="monospace"
+                android:text="5 km"
+                android:textSize="16sp"
+                app:drawableTint="#F44336"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textRateDetails"
+                app:layout_constraintTop_toTopOf="@+id/textRateDetails" />
+
+            <ImageView
+                android:id="@+id/imageRest"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/textHarga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/frank_ruhl_libre_bold"
+                android:text="Price"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textMenu"
+                app:layout_constraintTop_toBottomOf="@+id/imageMenu" />
+
+            <Button
+                android:id="@+id/btnDist"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:clickable="false"
+                android:fontFamily="monospace"
+                android:text="Distance"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/textDistanceRest"
+                app:layout_constraintStart_toStartOf="@+id/textDistanceRest"
+                app:layout_constraintTop_toBottomOf="@+id/textDistanceRest" />
+
+            <TextView
+                android:id="@+id/textMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/frank_ruhl_libre_bold"
+                android:text="Menu"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+            <ProgressBar
+                android:id="@+id/progressLoadDetail"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/imageRest"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/imageRest"
+                app:layout_constraintTop_toTopOf="@+id/imageRest" />
+
+            <TextView
+                android:id="@+id/textTypeEat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="monospace"
+                android:text="Type"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/textRestaurantName"
+                app:layout_constraintTop_toBottomOf="@+id/textRestaurantName" />
+
+            <TextView
+                android:id="@+id/textAddressResto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="monospace"
+                android:text="Address"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textTypeEat"
+                app:layout_constraintTop_toBottomOf="@+id/textTypeEat" />
+
+            <TextView
+                android:id="@+id/textDetailPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="monospace"
+                android:text="Detail Phone"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textPhone"
+                app:layout_constraintTop_toBottomOf="@+id/textPhone" />
+
+            <TextView
+                android:id="@+id/textRateDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="16dp"
+                android:drawableEnd="@drawable/ic_baseline_star_rate_24"
+                android:fontFamily="monospace"
+                android:text="4.5"
+                android:textSize="16sp"
+                app:drawableTint="#FF5722"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textAddressResto" />
+
+            <TextView
+                android:id="@+id/textDetailHarga"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="monospace"
+                android:text="Detail Harga"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textHarga"
+                app:layout_constraintTop_toBottomOf="@+id/textHarga" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/frank_ruhl_libre_bold"
+                android:text="About Restaurant"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonReviewDetail" />
+
+            <ImageView
+                android:id="@+id/imageMenu"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="@+id/textMenu"
+                app:layout_constraintTop_toBottomOf="@+id/textMenu"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <Button
+                android:id="@+id/buttonReviewDetail"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:fontFamily="monospace"
+                android:text="See Review"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/textRateDetails"
+                app:layout_constraintHorizontal_bias="0.483"
+                app:layout_constraintStart_toStartOf="@+id/textRateDetails"
+                app:layout_constraintTop_toBottomOf="@+id/textRateDetails" />
+
+            <TextView
+                android:id="@+id/textRestaurantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/frank_ruhl_libre_bold"
+                android:text="Nama Restaurant"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageRest" />
+
+            <TextView
+                android:id="@+id/textPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/frank_ruhl_libre_bold"
+                android:text="Phone"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textHarga"
+                app:layout_constraintTop_toBottomOf="@+id/textDetailHarga" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
